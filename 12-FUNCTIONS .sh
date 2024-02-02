@@ -9,7 +9,7 @@ if
 # this function validate the previous command success or failure
 VALIDATE(){
 
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
     then
         echo "failure"
         exit 1

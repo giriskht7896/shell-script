@@ -8,10 +8,10 @@ VALIDATE(){
 
     if [ $? -ne 0 ]
     then
-        echo " $1.....failure"
+        echo " $2.....failure"
         exit 1
     else
-        echo "$1..... success" 
+        echo "$2..... success" 
     fi
     
 }
@@ -27,3 +27,5 @@ yum install nginx -y &>>$LOGFILE
 VALIDATE $? " installed nginx "
 yum install postfix -y &>>$LOGFILE
 VALIDATE $? "installed postfix"
+yum install git -y &>>$LOGFILE
+VALIDATE $? "installed git"

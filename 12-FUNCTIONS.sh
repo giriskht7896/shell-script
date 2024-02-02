@@ -12,10 +12,10 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
     then
-        echo "failure"
+        echo "$1 failure"
         exit 1
     else
-        echo "success" 
+        echo "$1 success" 
     fi
 
 }
@@ -23,4 +23,4 @@ VALIDATE(){
 yum install nginx -y
 VALIDATE $? "installed nginx"
 yum install postfix -y
-VALIDATE $? "installed npostfix"
+VALIDATE $? "installed postfix"

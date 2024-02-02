@@ -21,6 +21,6 @@ VALIDATE(){
 }
 
 yum install nginx -y
-VALIDATE $? "installed nginx"
+VALIDATE $? " installed nginx "
 yum install postfix -y
-VALIDATE $? " installed postfix"
+VALIDATE $? " installed postfix "

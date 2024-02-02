@@ -2,4 +2,4 @@
 
 echo "please enter the username"
 read USERNAME
-echo "usename entered is :$USERNAME
+echo "username entered is :$USERNAME"

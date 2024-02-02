@@ -1,11 +1,12 @@
 #$/bin/bash
 
 USERID=$(id -u)
+
 if[ $USERID -ne 0 ]
 then 
     echo "run this with root user "
     exit 1
-if
+fi
 # this function validate the previous command success or failure
 VALIDATE(){
 

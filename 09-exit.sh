@@ -8,7 +8,7 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
     echo "ERROR:: please run this with root access"
-    exit 
+    exit 1
   
 fi
 yum install git -y

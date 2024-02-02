@@ -23,7 +23,7 @@ then
     exit 1
 fi
 
-yum install nginx -y &>>&LOGFILE
+yum install nginx -y &>>$LOGFILE
 VALIDATE $? " installed nginx "
-yum install postfix -y &>>&LOGFILE
+yum install postfix -y &>>$LOGFILE
 VALIDATE $? "installed postfix"

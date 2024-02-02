@@ -1,12 +1,8 @@
 #$/bin/bash
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
-USERID=$(id -u)
-
-if [ $USERID -ne 0 ]
-then 
-    echo "run this with root user "
-    exit 1
-fi
 # this function validate the previous command success or failure
 VALIDATE(){
 
@@ -19,8 +15,15 @@ VALIDATE(){
     fi
     
 }
+USERID=$(id -u)
 
-yum install nginx -y
+if [ $USERID -ne 0 ]
+then 
+    echo "run this with root user "
+    exit 1
+fi
+
+yum install nginx -y &>>&LOGFILE
 VALIDATE $? " installed nginx "
-yum install postfix -y
+yum install postfix -y &>>&LOGFILE
 VALIDATE $? "installed postfix"

@@ -8,10 +8,10 @@ VALIDATE(){
 
     if [ $? -ne 0 ]
     then
-        echo " $2.....failure"
+        echo " $3.....failure"
         exit 1
     else
-        echo "$2..... success" 
+        echo "$3..... success" 
     fi
     
 }

@@ -10,12 +10,12 @@ fi
 # this function validate the previous command success or failure
 VALIDATE(){
 
-    if [ $1 -ne 0 ]
+    if [ $? -ne 0 ]
     then
-        echo "$2 failure"
+        echo " failure"
         exit 1
     else
-        echo "$2 success" 
+        echo " success" 
     fi
 
 }

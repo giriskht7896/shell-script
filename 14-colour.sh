@@ -27,7 +27,7 @@ then
     exit 1
 fi
 
-yum amazon-linux-extras install nginx1 -y &>>$LOGFILE
+amazon-linux-extras install nginx1 -y &>>$LOGFILE
 VALIDATE $? " installed nginx "
 yum install postfix -y &>>$LOGFILE
 VALIDATE $? "installed postfix"

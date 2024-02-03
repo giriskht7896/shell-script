@@ -10,3 +10,8 @@ then
     echo -e "$R Error: run the command with root or sudo"
     exit 1
 fi
+
+for i in $@
+do
+    yum install $i -y
+done

@@ -2,7 +2,7 @@
 DATE=$(date +%F)
 LOGSDIR=/home/ec2-user/shell-logs
 SCRIPT_NAME=$0
-LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
+LOGFILE=$LOGSDIR/$0-$DATE.log
 
 
 USERID=$(id -u)

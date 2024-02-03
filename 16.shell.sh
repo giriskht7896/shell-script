@@ -1,7 +1,7 @@
 #$/bin/bash
 DATE=$(date +%F)
 USERID=$(id -u)
-LOGSDIR=/tmp/shellscript-logs
+LOGSDIR=/tmp/
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
 R="\e[31m"

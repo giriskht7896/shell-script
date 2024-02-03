@@ -10,7 +10,7 @@ if [ $USERID -ne 0 ]
 then
     echo -e "$R ERROR: run this command with root access"
     exit 1
-if
+fi
 
 for i in $@
 do

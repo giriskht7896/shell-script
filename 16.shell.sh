@@ -11,7 +11,7 @@ Y="\e[33m"
 
 if [ $USERID -ne 0 ]
 then
-    echo -e "$R ERROR: run this command with root access"
+    echo -e "$R ERROR: run this command with root access $N"
     exit 1
 fi
 

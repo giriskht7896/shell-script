@@ -12,10 +12,10 @@ VALIDATE(){
 
     if [ $? -ne 0 ]
     then
-        echo -e " $2.....$R failure $N"
+        echo -e " $2.....$R failure $N installed"
         exit 1
     else
-        echo -e "$2..... $G success  $N" 
+        echo -e "$2..... $G success  $N installed" 
     fi
     
 }

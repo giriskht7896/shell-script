@@ -14,7 +14,7 @@ SCRIPT_NAME=$0
 LOGFILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 
 Disk_USAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')
-Disk_USAGE_THRESHOLD=1
+Disk_USAGE_THRESHOLD=0.5
 message=""
 
 #IFS= internal field seperator

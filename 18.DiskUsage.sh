@@ -13,8 +13,8 @@ LOGFILE_DIRECTORY=/tmp
 SCRIPT_NAME=$0
 LOGFILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 
-Disk_Usage=$(df -hT | grep -vE 'tmpfs|Filesystem')
-Disk_Usage_threshold=1
+Disk_USAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')
+Disk_USAGE_THRESHOLD=1
 
 #IFS= internal field seperator
 while IFS= read line

@@ -19,5 +19,5 @@ Disk_Usage_threshold=1
 #IFS= internal field seperator
 while IFS= read line
 do
-    echo"output:$line"
+    echo"output: $line"
 done <<<$Disk_Usage

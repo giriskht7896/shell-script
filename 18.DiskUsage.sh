@@ -15,12 +15,17 @@ LOGFILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 
 Disk_USAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')
 Disk_USAGE_THRESHOLD=1
+message=""
 
 #IFS= internal field seperator
 while IFS= read line
 do
     usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
-    partition=$(echo $line | awk '{print $1}' )
+    partition=$(echo $line | awk '{print $1}')
+    if [ $usage-gt $Disk_USAGE_THRESHOLD ]
+    then
+    message+="HIGH DISK USAGE ON $partition: $usage"
+    fi
 done <<<$Disk_USAGE
 
-
+echo "message: $message"

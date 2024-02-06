@@ -19,5 +19,8 @@ Disk_USAGE_THRESHOLD=1
 #IFS= internal field seperator
 while IFS= read line
 do
-    echo"output: $line"
+    usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
+    partition=$(echo $line | awk '{print $1}' )
 done <<<$Disk_USAGE
+
+
